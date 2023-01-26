@@ -10,7 +10,7 @@ function hide(object) {
 }
 
 function onloadfunction() {
-    //hide(document.getElementById("dart"))
+    $("#dart").hide()
 }
 
 function getmousepos() {
@@ -19,9 +19,10 @@ function getmousepos() {
         console.log(event.clientX)
         console.log(event.clientY)
         console.log(clones)
-        var clone = $("#dart").clone()
+        var clone = $("#dart").clone().appendTo(".target1");
         clone.css('left', event.clientX-17 + "px")
         clone.css('top', event.clientY-17 + "px")
+        clone.show(50)
         $("#dart").css('left', event.clientX-17 + "px")
         $("#dart").css('top', event.clientY-17 + "px")
     }
