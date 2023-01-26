@@ -7,11 +7,14 @@
         <script src="jquery-3.6.1.min.js"></script>
     </head>
     
-    <body>
+    <body onload="onloadfunction()">
         <h1 class="title">Archery!</h1>
         <div class="area">
-            <div class="target1" onclick="getmousepos()"></div>
+            <div class="target1" onclick="getmousepos()">
+                <div id="dart"></div>
+            </div>
         </div>
+        
        
     </body>
 </html>

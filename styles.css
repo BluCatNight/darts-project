@@ -21,14 +21,13 @@ body {
     margin: 0 auto;
 }
 
-.dart {
+#dart {
+    position: absolute;
     height: 50px;
     width: 50px;
-    background-color: #bbb;
+    background-color: rgb(220, 42, 42);
     border-radius: 50%;
     align-items: center;
-    background-position-x: center;
-    background-position-y: center;
 }
 
 .text {
