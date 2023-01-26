@@ -1,14 +1,6 @@
 var clones = 0;
 const dartid = "dart";
 
-
-function show(object) {
-    object.style.display = "block";
-}
-function hide(object) {
-    object.style.display = "none";
-}
-
 function onloadfunction() {
     $("#dart").hide()
 }
