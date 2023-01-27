@@ -63,7 +63,7 @@ function check() {
 
         result = result/9
         console.log(result)
-        if(result < 20) {
+        if(result < 35) {
             $("#readable").html('Precise!')
         } else {
             $("#readable").html('Not Precise..')
@@ -74,6 +74,7 @@ function check() {
 
 function onloadfunction() {
     $("#dart").hide()
+    $("#readable").html('')
 }
 
 function onresetfunction() {
@@ -85,6 +86,7 @@ function onresetfunction() {
     y = []
     list = []
     clonelist = new Array();
+    $("#readable").html('')
 }
 
 
