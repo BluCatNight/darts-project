@@ -16,12 +16,15 @@ function check() {
     for(z in y) {
         count += 1
         var lastpoint = [x[z],y[z]]
-        num = Math.sqrt(lastpoint[0] + x[z] **2 + lastpoint[1] + y[z]**2)
+        num = Math.sqrt(lastpoint[0] + x[z] *2 + lastpoint[1] + y[z]*2)
         final = final + num
     }
     final = final / count
     console.log(final)
     console.log(count)
+    if (final < 480) {
+        $("#readable").html('Precise!')
+    }
 }
 
 
