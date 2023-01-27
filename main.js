@@ -8,7 +8,7 @@ function onloadfunction() {
 
 function onresetfunction() {
     for(cln in clonelist) {
-        cln.hide(50); //Need help i cant get this to work.
+        clonelist[cln].remove(); //Need help i cant get this to work.
     }
     clones = 0;
 }
