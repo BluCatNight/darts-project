@@ -1,29 +1,73 @@
 var clones = 0;
-const dartid = "dart";
 var clonelist = new Array();
 var x = []
 var y = []
-
+var list = []
 //center
 //427 x
 //270 y
 
 function check() {
     //unfinished
-    var num = 0;
-    var final = 0;
-    var count = 0;
-    for(z in y) {
-        count += 1
-        var lastpoint = [x[z],y[z]]
-        num = Math.sqrt(lastpoint[0] + x[z] *2 + lastpoint[1] + y[z]*2)
-        final = final + num
-    }
-    final = final / count
-    console.log(final)
-    console.log(count)
-    if (final < 480) {
-        $("#readable").html('Precise!')
+    // var num = 0;
+    // var final = 0;
+    // var count = 0;
+    // for(z in y) {
+    // }
+    // final = final / count
+    // console.log(final)
+    // console.log(count)
+    // if (final < 480) {
+    //     $("#readable").html('Precise!')
+    // }
+    if(clones != 4) {
+        alert("Not enough darts in the scene to calculate.")
+    } 
+    else {
+        for(e in x) {
+            list.push([x[e],y[e]])
+        }
+
+        // this clutter is temporary
+        var result = 0
+        var a = list[0][0] - list[1][0];
+        var b = list[0][1] - list[1][1];
+        result += Math.sqrt( a*a + b*b );
+        var a = list[0][0] - list[2][0];
+        var b = list[0][1] - list[2][1];
+        result += Math.sqrt( a*a + b*b );
+        var a = list[0][0] - list[3][0];
+        var b = list[0][1] - list[3][1];
+        result += Math.sqrt( a*a + b*b );
+
+        var a = list[1][0] - list[2][0];
+        var b = list[1][1] - list[2][1];
+        result += Math.sqrt( a*a + b*b );
+        var a = list[1][0] - list[3][0];
+        var b = list[1][1] - list[3][1];
+        result += Math.sqrt( a*a + b*b );
+
+        var a = list[2][0] - list[1][0];
+        var b = list[2][1] - list[1][1];
+        result += Math.sqrt( a*a + b*b );
+        var a = list[2][0] - list[3][0];
+        var b = list[2][1] - list[3][1];
+        result += Math.sqrt( a*a + b*b );
+
+        var a = list[3][0] - list[1][0];
+        var b = list[3][1] - list[1][1];
+        result += Math.sqrt( a*a + b*b );
+        var a = list[3][0] - list[2][0];
+        var b = list[3][1] - list[2][1];
+        result += Math.sqrt( a*a + b*b );
+
+        result = result/9
+        console.log(result)
+        if(result < 20) {
+            $("#readable").html('Precise!')
+        } else {
+            $("#readable").html('Not Precise..')
+        }
     }
 }
 
@@ -39,6 +83,7 @@ function onresetfunction() {
     clones = 0;
     x = []
     y = []
+    list = []
     clonelist = new Array();
 }
 
