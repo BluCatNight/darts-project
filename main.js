@@ -5,6 +5,11 @@ function onloadfunction() {
     $("#dart").hide()
 }
 
+function onreset() {
+    $("#dart").hide()
+}
+
+
 function getmousepos() {
     if (clones <= 3 ) {
         clones += 1
