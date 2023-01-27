@@ -23,8 +23,8 @@ body {
 
 #dart {
     position: absolute;
-    height: 50px;
-    width: 50px;
+    height: 15px;
+    width: 15px;
     background-color: rgb(220, 42, 42);
     border-radius: 50%;
     align-items: center;
