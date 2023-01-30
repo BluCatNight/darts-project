@@ -63,18 +63,55 @@ function check() {
 
         result = result/9
         console.log(result)
-        if(result < 35) {
+        if(result < 23) {
             $("#readable").html('Precise!')
         } else {
             $("#readable").html('Not Precise..')
+            
         }
+        $("#raw").html("Pres:" + Math.round(result))
+        var result = 0
+        var $this = $("#target");
+        var offset = $this.position();
+        var width = $this.width();
+        var height = $this.height();
+
+        var centerX = offset.left + width / 2;
+        var centerY = offset.top + height / 2;
+        
+        var extralist = [centerX,centerY]
+
+        var a = list[0][0] - extralist[0];
+        var b = list[0][1] - extralist[1];
+        result += Math.sqrt( a*a + b*b );
+
+        var a = list[1][0] - extralist[0];
+        var b = list[1][1] - extralist[1];
+        result += Math.sqrt( a*a + b*b );
+
+        var a = list[2][0] - extralist[0];
+        var b = list[2][1] - extralist[1];
+        result += Math.sqrt( a*a + b*b );
+
+        var a = list[3][0] - extralist[0];
+        var b = list[3][1] - extralist[1];
+        result += Math.sqrt( a*a + b*b );
+
+        result = result/4
+        console.log(result)
+        if(result < 50) {
+            $("#readable").html($("#readable").html() + " And Accurate!") 
+        } else {
+            $("#readable").html($("#readable").html() + " And Not Accurate...")
+        }
+        $("#raw").html($("#raw").html() + "\nAcc: " + Math.round(result))
     }
 }
 
 
 function onloadfunction() {
     $("#dart").hide()
-    $("#readable").html('')
+    $("#readable").html('&nbsp;')
 }
 
 function onresetfunction() {
@@ -86,7 +123,8 @@ function onresetfunction() {
     y = []
     list = []
     clonelist = new Array();
-    $("#readable").html('')
+    $("#readable").html('&nbsp;')
+    $("#raw").html('&nbsp;')
 }
 
 

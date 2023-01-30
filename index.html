@@ -8,16 +8,37 @@
     </head>
     
     <body onload="onloadfunction()">
-        <h1 class="title">Darts!</h1>
-        <div class="area">
-            <div class="target1" onclick="getmousepos()">
-                <div id="dart"></div>
+        <h1 class="title">Darts! (Demo)</h1>
+        <div class='tools'>
+            <button class="reset" onclick="onresetfunction()" style="color:brown">Reset</button>
+            <button class="reset" onclick="check()">Check</button>
+        </div>
+        <div>
+            <div class="area">
+                <div class="target1" id="target" onclick="getmousepos()">
+                    <div id="dart"></div>
+                </div>
+            </div>
+            <div class="data">
+                <div class="info">
+                    <h2 class="infotext">Info:</h2>
+                    <p class="infotext">Just press on the target!</p>
+                    <p class="infotext">
+                        When you are done placing your 4 darts, click the 
+                        <span style="color:khaki; font-weight: bold;">Check</span> 
+                        button to get the results. <br/>
+                    </p>
+                    <p class="infotext">
+                        If you want to try again, Then press the
+                        <span style="color:brown; font-weight: bold;">Reset</span> 
+                        button for a reset. <br/>
+                    </p>
+                    <p class="infotext"><span style="color:brown; font-weight: bold;">This is a demo. More features soon.</span> </p>
+                </div>
+                <h3 class="datatext" id="readable">&nbsp;</h3>
+                <h3 class="datatext" id="raw">&nbsp;</h3>
             </div>
         </div>
-        <h2 class="title" id="readable">placeholder</h2>
-        <h3 class="title" id="raw">placeholder</h3>
-        <button class="reset" onclick="onresetfunction()">Reset</button>
-        <button class="reset" onclick="check()">Check</button>
     </body>
 </html>
     
