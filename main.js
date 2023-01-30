@@ -99,7 +99,7 @@ function check() {
 
         result = result/4
         console.log(result)
-        if(result < 50) {
+        if(result < 35) {
             $("#readable").html($("#readable").html() + " And Accurate!") 
         } else {
             $("#readable").html($("#readable").html() + " And Not Accurate...")
